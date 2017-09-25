@@ -1,0 +1,11 @@
+{
+  "name": "Allocate",
+  "short_name": "Allocate",
+  "description": "",
+  "lang": "en-US",
+  "start_url": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FFFFFF",
+  "theme_color": "#00bae4",
+}

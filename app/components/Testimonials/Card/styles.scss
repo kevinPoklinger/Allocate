@@ -1,0 +1,46 @@
+@import '~styles/settings/settings';
+
+.testimonialCard {
+  width: 395px;
+  border: 1px solid $light-gray;
+  padding: 40px;
+  margin: 31px;
+  border-radius: 10px;
+  background-color: white;
+  @include breakpoint(small only) {
+    padding: 32px;
+    margin-right: 0px;
+  }
+
+  &__desc {
+    font-size: $fs-mx;
+    color: #3D3E6F;
+    margin-bottom: 56px;
+    letter-spacing: 0;
+    line-height: 32px;
+    @include breakpoint(small only) {
+      font-size: rem-calc(14px);
+      line-height: 24px;
+      margin-bottom: 36px;
+    }
+  }
+  &__avatar {
+
+  }
+  &__username {
+    font-size: rem-calc(15);
+    color: #3D3E6F;
+    margin-bottom: 5px;
+    letter-spacing: 0;
+    line-height: 24px;
+  }
+  &__company {
+    /* Allocate: */
+    letter-spacing: 0;
+    line-height: 24px;
+    font-size: rem-calc(14);
+    color: #9697BF;
+    margin-bottom: 0px;
+  }
+
+}

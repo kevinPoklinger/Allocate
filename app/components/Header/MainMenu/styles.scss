@@ -1,0 +1,100 @@
+@import '~styles/settings/settings';
+
+.mainMenu {
+  display: flex;
+  flex-flow: row wrap;
+  @include breakpoint(small only) {
+    margin-top: $rem-tn;
+  }
+  @include breakpoint(medium) {
+    max-width: rem-calc(520);
+    justify-content: flex-end;
+  }
+  &__item {
+    &:not(:last-child) {
+      @include breakpoint(medium) {
+        margin-right: $rem-xl;
+      }
+    }
+    @include breakpoint(small only) {
+      width: 100%;
+      &:not(:first-child) {
+        padding-top: $rem-sm;
+      }
+      padding-right: map-get($grid-column-gutter, small) / 2;
+      padding-left: map-get($grid-column-gutter, small) / 2;
+      padding-bottom: $rem-sm;
+      @include border;
+    }
+  }
+
+  &__subMenuItem {
+    &:not(:last-child) {
+      @include breakpoint(medium) {
+        margin-right: $rem-xl;
+      }
+    }
+    @include breakpoint(small only) {
+      width: 100%;
+    }
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: normal;
+    text-decoration: none;
+    font-family: Helvetica;
+    font-size: rem-calc(15px);
+    letter-spacing: 0;
+    line-height: rem-calc(40px);
+
+    cursor: pointer;
+    @include breakpoint(small only) {
+      font-size: $fs-md;
+      text-transform: none;
+      font-weight: normal;
+    }
+    &--topLevel {
+      text-transform: inherit;
+      font-weight: normal;
+      @include breakpoint(small only) {
+        padding-top: $rem-sm;
+        padding-bottom: $rem-sm;
+      }
+    }
+    &--secondLevel {
+      @include breakpoint(small only) {
+        padding: $rem-sm $rem-lg;
+      }
+    }
+    &--active {
+      color: $secondary-color;
+      @include breakpoint(small only) {
+        background-color: $secondary;
+        border-radius: $global-radius;
+        &, &:hover {
+          color: white !important;
+        }
+      }
+    }
+    &--hasChildren, &--closed {
+      &:after {
+        display: block;
+        margin-left: $rem-tn;
+        content: '';
+      }
+    }
+    &--opened {
+      &:after {
+        display: block;
+        margin-left: $rem-tn;
+        content: '';
+      }
+    }
+
+    &:focus, &:hover {
+      color: white;
+    }
+  }
+}

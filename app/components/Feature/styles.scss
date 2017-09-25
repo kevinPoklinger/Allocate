@@ -1,0 +1,65 @@
+@import '~styles/settings/settings';
+
+.feature {
+  background-image: url('./bg.jpg');
+  background-size: inherit;
+  background-repeat: no-repeat;
+  background-position: center top;
+  color: #33217E;
+  padding-top: 78px;
+  padding-bottom: 18px;
+
+  @include breakpoint(small only) {
+    background-image: url('./mbg.jpg');
+    background-size: 100% 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  &__title {
+    color: #33217E;
+    margin-bottom: rem-calc(80px);
+    font-size: $fs-hg;
+    letter-spacing: 0;
+    line-height: rem-calc(48px);
+    @include breakpoint(small only) {
+      font-size: rem-calc(20px);
+      line-height: rem-calc(28px);
+      margin-bottom: 0;
+    }
+  }
+  &__titleSymbol {
+    font-size: $fs-hg;
+    color: #806BFF;
+    letter-spacing: 0;
+    @include breakpoint(small only) {
+      font-size: rem-calc(20px);
+      line-height: rem-calc(28px);
+      color: #33217E;
+    }
+  }
+  &__icon {
+    margin-bottom: rem-calc(24);
+    @include breakpoint(small only) {
+      margin-bottom: rem-calc(16);
+    }
+  }
+  &__cardTitle {
+    font-size: $fs-mx;
+    color: #3D3E6F;
+    letter-spacing: 0;
+    line-height: rem-calc(32px);
+    @include breakpoint(small only) {
+      font-size: rem-calc(14px);
+      line-height: rem-calc(24px);
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+  }
+  &__card {
+    @include breakpoint(small only) {
+      padding-top: rem-calc(32px);
+    }
+  }
+}

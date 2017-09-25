@@ -1,0 +1,33 @@
+@import '~styles/settings/settings';
+
+.footer {
+  background-image: url('./bg.jpg');
+  background-size: inherit;
+  background-repeat: no-repeat;
+  background-position: center top;
+  @include breakpoint(small only) {
+    background-image: url('./mbg.jpg');
+    background-size: 100% 100%;
+  }
+
+  &__rights {
+    font-family: Helvetica;
+    font-size: 15px;
+    color: #9697BF;
+    letter-spacing: 0;
+    line-height: 32px;
+    margin-left: 15px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  &__linkGroup {
+    margin-top: rem-calc(80px);
+    margin-right: rem-calc(32px);
+    @include breakpoint(small only) {
+      margin-top: rem-calc(293px);
+      margin-right: rem-calc(32px);
+      margin-bottom: rem-calc(32px);
+    }
+  }
+}

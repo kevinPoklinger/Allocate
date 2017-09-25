@@ -1,0 +1,16 @@
+@import '~styles/settings/settings';
+
+.notFound {
+  &__image {
+    max-height: 250px;
+    @include breakpoint(small only) {
+      max-height: 115px;
+    }
+  }
+
+  &__title {
+    @include breakpoint(small only) {
+      display: none;
+    }
+  }
+}

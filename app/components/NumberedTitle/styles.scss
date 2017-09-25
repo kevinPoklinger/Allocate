@@ -1,0 +1,25 @@
+@import '~styles/settings/settings';
+
+.numberedTitle {
+  height: 92px;
+  background-repeat: no-repeat;
+  padding-left: rem-calc(95);
+  display: table-cell;
+  vertical-align: middle;
+  @include breakpoint(small only) {
+    height: 40px;
+  }
+
+  &--1 {
+    background-image: url('./num01.png');
+    @include breakpoint(small only) {
+      background-image: url('./mnum01.png');
+    }
+  }
+  &--2 {
+    background-image: url('./num02.png');
+    @include breakpoint(small only) {
+      background-image: url('./mnum02.png');
+    }
+  }
+}

@@ -1,0 +1,65 @@
+@import '~styles/settings/settings';
+
+.overlayMenu {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./bg.png');
+  background-repeat: no-repeat;
+  background-position: center top;
+  top: 0px;
+  padding: 32px;
+
+  &__container {
+    padding-top: rem-calc(33px);
+    padding-bottom: rem-calc(89px);
+  }
+
+  &__item {
+    font-family: Helvetica;
+    font-size: rem-calc(20px);
+    color: $white;
+    letter-spacing: 0;
+    line-height: rem-calc(40px);
+    text-decoration: none;
+    text-transform: inherit;
+    font-weight: normal;
+  }
+
+  &__or{
+    font-size: rem-calc(14px);
+    color: #9697BF;
+    letter-spacing: 0;
+    line-height: rem-calc(24px);
+    justify-content: center;
+    margin-bottom: rem-calc(16px);
+    margin-top: rem-calc(16px);
+  }
+
+  &__button {
+    font-size: rem-calc(18px) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: rem-calc(24px);
+    padding-left: rem-calc(32px);
+    padding-right: rem-calc(32px);
+    background-image: linear-gradient(-135deg, #6EDFFF 0%, #37C7FF 100%);
+  }
+
+  &__request {
+    justify-content: center !important;
+    font-size: rem-calc(14px) !important;
+    color: white !important;
+    line-height: rem-calc(24px) !important;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: inherit;
+    font-weight: normal;
+  }
+}

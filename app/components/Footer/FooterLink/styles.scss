@@ -1,0 +1,41 @@
+@import '~styles/settings/settings';
+
+.footerLink {
+  @include breakpoint(small only) {
+    margin-left: 22px !important;
+  }
+
+  &__link {
+    margin-left: 0px !important;
+  }
+
+  &__title {
+    font-family: Helvetica;
+    font-size: 12px;
+    color: #AE6FCF;
+    letter-spacing: 0.8px;
+    line-height: 24px;
+    @include breakpoint(small only){
+      opacity: 0.5;
+      font-size: rem-calc(12px);
+      color: #FFFFFF;
+      line-height: rem-calc(24px);
+    }
+  }
+
+  &__a {
+    color: #3D3E6F;
+    font-family: Helvetica;
+    font-weight: normal;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: 32px;
+    @include breakpoint(small only) {
+      font-size: rem-calc(14px);
+      color: #FFFFFF;
+      line-height: rem-calc(32px);
+    }
+  }
+}

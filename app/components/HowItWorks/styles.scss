@@ -1,0 +1,93 @@
+@import '~styles/settings/settings';
+
+.howItWorks {
+  color: #33217E;
+  background-image: url('./bg.jpg');
+  background-size: inherit;
+  background-repeat: no-repeat;
+  background-position: center top;
+  padding-top: 180px;
+  padding-bottom: 128px;
+  @include breakpoint(small only) {
+    background-image: url('./mbg.jpg');
+    background-size: 100% 100%;
+    padding-top: rem-calc(96px);
+    padding-bottom: 0;
+  }
+  &__title {
+    /* HEAD 1: */
+    font-size: rem-calc(54px);
+    letter-spacing: 0;
+    line-height: rem-calc(56px);
+  }
+  &__step {
+    background-repeat: no-repeat;
+    &--1 {
+      background-position: right top;
+      padding-top: rem-calc(130px);
+      @include breakpoint(large only) {
+        height: rem-calc(462px);
+      }
+      @include breakpoint(small only) {
+        padding-top: rem-calc(24px);
+      }
+    }
+    &--2 {
+      height: rem-calc(644px);
+      margin-top: rem-calc(448px);
+      @include breakpoint(small only) {
+        margin-top: rem-calc(590px);
+        height: rem-calc(265px);
+      }
+    }
+
+    @include breakpoint(small only) {
+      padding-left: rem-calc(32px);
+    }
+  }
+  &__subTitle{
+    font-size: $fs-hg;
+    color: #33217E;
+    letter-spacing: 0;
+    line-height: rem-calc(48px);
+    @include breakpoint(small only) {
+      font-size: rem-calc(20px);
+      line-height: rem-calc(28px);
+      padding-right: rem-calc(32px);
+      padding-top: rem-calc(16px);
+      margin-bottom: rem-calc(16px);
+    }
+  }
+  &__stepDesc {
+    padding-left: rem-calc(112);
+    font-size: $fs-mx;
+    color: #3D3E6F;
+    letter-spacing: 0;
+    line-height: rem-calc(32px);
+    @include breakpoint(small only) {
+      font-size: rem-calc(14px);
+      line-height: rem-calc(24px);
+      padding-right: rem-calc(32px);
+      padding-left: 0;
+      margin-bottom: rem-calc(24px);
+    }
+  }
+  &__stepLink {
+    padding-left: rem-calc(112);
+    font-size: $fs-base;
+    font-weight: normal;
+    color: #19ACE6;
+    letter-spacing: 0;
+    line-height: rem-calc(32px);
+    text-decoration: none;
+    text-transform: inherit;
+    @include breakpoint(small only) {
+      font-size: rem-calc(14px);
+      line-height: rem-calc(24px);
+      padding-left: 0;
+    }
+    &--arrow {
+      padding-right: rem-calc(8px);
+    }
+  }
+}

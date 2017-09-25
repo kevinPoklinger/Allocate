@@ -1,0 +1,51 @@
+@import '~styles/settings/settings';
+
+.header {
+  background-image: url('./bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  &__inner {
+    height: 105px;
+    @include breakpoint(small only) {
+      height: 81px;
+      background-size: 100% 100%;
+      background-image: url('./mbg.jpg');
+    }
+  }
+
+  &__logo {
+    padding-left: 32px;
+  }
+
+  &__overlayMenu {
+    padding-right: 32px;
+  }
+
+  &__login {
+    font-family: Helvetica;
+    font-weight: normal;
+    font-size: rem-calc(15px);
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: rem-calc(40px);
+    text-decoration: none;
+    text-transform: inherit;
+    padding-right: rem-calc(32px);
+    padding-left: rem-calc(132px);
+  }
+
+  &__getstarted {
+    height: 48px;
+    width: 120px;
+    background-color: #FFFFFF;
+    font-size: rem-calc(15px);
+    color: #AE6FCF;
+    letter-spacing: 0;
+    text-transform: inherit;
+    padding: 0;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
